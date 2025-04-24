@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>عداد كسم هيل</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      direction: rtl;
+      background-image: url('./background.jpg'); /* تأكد إن الصورة بنفس المجلد */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* شفافية بسيطة عشان النص يظهر بوضوح */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    #counter {
+      font-size: 100px;
+      color: #ff5733;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 30px;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn1 {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn1:hover {
+      background-color: #0056b3;
+    }
+
+    .btn2 {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn2:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>عدد كسميات هيل</h1>
+    <div id="counter">0</div>
+    <button class="btn1" onclick="increase(1)">كسم هيل</button>
+    <button class="btn2" onclick="increase(2)">كسمين هيل</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function increase(amount) {
+      count += amount;
+      document.getElementById("counter").innerText = count;
+    }
+  </script>
+
+</body>
+</html>
