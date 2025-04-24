@@ -6,20 +6,30 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
       margin: 0;
       direction: rtl;
-      background-image: url('./background.jpg'); /* تأكد إن الصورة بنفس المجلد */
+      background-image: url('./background.jpg'); /* تأكد إن الصورة في نفس المجلد */
       background-size: cover;
       background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
     }
 
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.8); /* شفافية بسيطة عشان النص يظهر بوضوح */
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -64,15 +74,41 @@
     .btn2:hover {
       background-color: #1e7e34;
     }
+
+    .bio-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      line-height: 1.8;
+    }
+
+    .bio-box h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #c0392b;
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>عدد كسميات هيل</h1>
-    <div id="counter">0</div>
-    <button class="btn1" onclick="increase(1)">كسم هيل</button>
-    <button class="btn2" onclick="increase(2)">كسمين هيل</button>
+  <div class="wrapper">
+    <div class="bio-box">
+      <h2>من هو هيل؟</h2>
+      <p>هيل هو عميل إسرائيلي متنكر في هيئة لاعب League of Legends.</p>
+      <p>العمر: مجهول، لكن من المحتمل أنه 12 سنة (قاصر).</p>
+      <p>الجنس: غير معروف، يدّعي أنه ذكر لكن نسبة كونه مخنث كبيرة.</p>
+      <p>الانتماء: صهيوني.</p>
+      <p>معلومة هامة: يخاف من دخول المنوفية لئلا يخرج منها حامل.</p>
+    </div>
+
+    <div class="container">
+      <h1>عدد كسميات هيل</h1>
+      <div id="counter">0</div>
+      <button class="btn1" onclick="increase(1)">كسم هيل</button>
+      <button class="btn2" onclick="increase(2)">كسمين هيل</button>
+    </div>
   </div>
 
   <script>
